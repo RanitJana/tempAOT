@@ -27,6 +27,9 @@ const search = require('./routes/search.route.js');
 
 app
     .use(express.static('./public'))
+    .get('/', (req, res) => {
+        res.render('index');
+    })
     .use('/achivement', achivement)
     .use('/career', career)
     .use('/contact', contact)
@@ -49,10 +52,5 @@ app
     .use('/staff', staff)
     .use('/StudentActivity', StudentActivity)
     .use('/studentPortal', studentPortal)
-
-app
-    .get('/', (req, res) => {
-        res.render('index');
-    })
 
 module.exports = app;
