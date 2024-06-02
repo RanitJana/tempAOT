@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-
+app.set('view engine', 'ejs');
 const achivement = require('./routes/achivement.route.js');
 const career = require('./routes/career.route.js');
 const contact = require('./routes/contact.route.js');
@@ -24,8 +24,8 @@ const StudentActivity = require('./routes/studentActivity.route.js');
 const studentPortal = require('./routes/studentPortal.route.js');
 const search = require('./routes/search.route.js');
 
+
 app
-    .set('view engine', 'ejs')
     .use(express.static('./public'))
     .use('/achivement', achivement)
     .use('/career', career)
