@@ -23,13 +23,12 @@ const staff = require('./routes/staff.route.js');
 const StudentActivity = require('./routes/studentActivity.route.js');
 const studentPortal = require('./routes/studentPortal.route.js');
 const search = require('./routes/search.route.js');
+const home = require('./routes/home.route.js');
 
 
 app
     .use(express.static('./public'))
-    .get('/', (req, res) => {
-        res.render('index');
-    })
+    .use('/', home)
     .use('/achivement', achivement)
     .use('/career', career)
     .use('/contact', contact)
