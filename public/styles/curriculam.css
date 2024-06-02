@@ -1,0 +1,59 @@
+@import url(./basicStyles.css);
+
+.basic-intro{
+    padding: 1rem;
+    margin:1rem 0.5rem;
+    border-radius: 5px;
+    background-color: var(--aot-light-color--);
+    box-shadow: -10px 10px 10px rgba(0,0,0,0.15);
+}
+
+.basic-intro :last-child{
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+
+.sub-count{
+    padding: 0px 7px;
+}
+
+.syllabus{
+    text-align: center;
+}
+p img{
+    width: 2rem;
+}
+
+.sem-count>li{
+    padding: 1rem 1.4rem;
+    margin:1rem 0.5rem;
+    border-radius: 5px;
+    background-color: var(--aot-light-color--);
+    box-shadow: -10px 10px 10px rgba(0,0,0,0.15);
+}
+
+.year{
+    text-align: center;
+    text-decoration: underline;
+}
+ 
+
+@media only screen and (max-width:600px) {
+    .basic-intro, curriculam-content{
+        padding: 1em ;
+    }
+}
+
+@media only screen and (max-width:630px){
+    .basic-intro {
+        margin: 0.7rem 0;
+    }
+    .sem-count > li {
+        margin: 0.7rem 0;
+    }
+    .syllabus{
+        margin-bottom: 0.5rem;
+        margin-top: -0.4rem;  
+    }
+}

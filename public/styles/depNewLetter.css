@@ -1,0 +1,104 @@
+header {
+    margin-top: -1.2rem;
+    padding-bottom: 0.5rem;
+}
+main{
+    position: relative;
+}
+.back {
+    display: flex;
+    position: sticky;
+    top: 0;
+    box-shadow: 0 2px 5px 5px rgba(0, 0, 0, 0.203);
+}
+
+.back .backImg {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
+    background-color: white;
+    background-color: var(--aot-light-color--);
+}
+.back .backImg:hover{
+    cursor: pointer;
+}
+.back h1 {
+    background-color: var(--aot-color--);
+    color: white;
+    width: 100%;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.backImg img{
+    width: 2rem;
+    mix-blend-mode: multiply;
+}
+.first {
+    box-shadow: var(--normal-shadow--);
+    padding: 1rem 2rem;
+    margin: 1rem;
+    border-radius: 8px;
+    background-color: var(--aot-light-color--);
+}
+
+.first p {
+    text-wrap: pretty;
+}
+
+.first ol>li {
+    margin: 1rem;
+    margin-left: 2rem;
+}
+
+.first span {
+   font-weight: bold;
+   text-decoration:underline;
+    margin: 5rem 0;
+}
+.contain{
+    background-color: white;
+    padding: 1rem;
+}
+@media only screen and (min-width:1097px) {
+    .banner {
+        justify-content: center;
+    }
+
+}
+
+@media only screen and (max-width:750px) {
+    header {
+        margin-top: 0rem;
+    }
+}
+
+@media only screen and (max-width:514px) {
+    .first {
+        margin: 1rem 0;
+        border-radius: 0px;
+        padding: 1rem;
+        /* font-size: 0.9rem; */
+    }
+
+    .back {
+        height: 3rem;
+    }
+
+    .back h1 {
+        font-size: 1.2rem;
+    }
+
+    .back .backImg img {
+        width: 1.5rem;
+    }
+}
+
+@media only screen and (max-width:357px) {
+    .back h1 {
+        font-size: 1rem;
+    }
+}

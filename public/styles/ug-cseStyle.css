@@ -1,0 +1,763 @@
+@import url(basicStyles.css);
+
+
+.thin-line {
+    border: none;
+    border-top: 1px solid #000;
+    margin: 10px 0;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.beforeIntro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    box-shadow: 0 2px 5px 5px rgba(0, 0, 0, 0.203);
+    z-index: 5;
+}
+
+.back-btn {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--aot-light-color--);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.back-btn img {
+    position: relative;
+    margin: 0;
+    padding: 0.5rem;
+    height: 100%;
+    width: 3.3rem;
+    mix-blend-mode: multiply;
+    left: 0;
+
+    cursor: pointer;
+}
+
+.beforeIntro h1 {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+.intro-slide-container {
+    width: 100%;
+    height: 580px;
+    padding: 0px 1rem;
+    border-radius: 5px;
+
+}
+
+.intro-slides {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    margin-top: 0.6rem;
+    border-radius: 6px;
+}
+
+.intro-slides img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+}
+
+.intro-slides img:not(.active) {
+    top: 0;
+    left: -100%;
+}
+
+
+
+.next,
+.prev {
+    position: absolute;
+    top: 50%;
+    transform: translateY(50%);
+    font-size: 24px;
+    color: #007aff;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 7px;
+    padding: 14px;
+    z-index: 1;
+
+}
+
+span.next {
+    right: 20px;
+}
+
+span.prev {
+    left: 20px;
+}
+
+span.next:hover,
+span.prev:hover {
+    background-color: var(--aot-light-color--);
+    opacity: 0.8;
+    color: #222;
+}
+
+
+@keyframes next1 {
+    from {
+        left: 0%
+    }
+
+    to {
+        left: -100%;
+    }
+}
+
+@keyframes next2 {
+    from {
+        left: 100%
+    }
+
+    to {
+        left: 0%;
+    }
+}
+
+@keyframes prev1 {
+    from {
+        left: 0%
+    }
+
+    to {
+        left: 100%;
+    }
+}
+
+@keyframes prev2 {
+    from {
+        left: -100%
+    }
+
+    to {
+        left: 0%;
+    }
+}
+
+.headings {
+    background-color: #232C69;
+    color: white;
+    text-align: center;
+    padding: 4px 0px;
+    margin-top: 20px;
+    font-size: 1.7em;
+}
+
+
+/* ====================     infrastructure section     ============================ */
+
+.infrastructure {
+    margin: 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 1rem;
+}
+
+.facility {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    height: 160px;
+    width: 275px;
+    /* background-color: #3846a2; */
+    margin: 10px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 7px;
+    transition: all 0.4s;
+    padding: 10px;
+    background-color: var(--aot-light-color--);
+    box-shadow: -5px 5px 5px #d7d7d7;
+}
+
+.facility:hover {
+    background: var(--aot-color--);
+    color: #fff;
+    box-shadow: -3px 3px 3px rgb(56, 56, 56), -5px 7px 5px 5px rgba(35, 44, 105, 0.5);
+    transform: translate(5px, -10px);
+    color: white;
+}
+
+
+
+/* =======================    Achivements and Academic Programs      =============== */
+
+.achivementsPrograms {
+    display: flex;
+    padding: 0px 10px;
+
+
+}
+
+.achivementsPrograms .achivements {
+    width: 69.999%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+
+}
+
+.achivement {
+    display: flex;
+    min-width: 47%;
+    max-width: 340px;
+    min-height: 190px;
+    background-color: var(--aot-light-color--);
+    flex-direction: column;
+    text-align: center;
+    border-radius: 7px;
+    margin: 10px;
+    /* border: 2px solid black; */
+    box-shadow: -5px 5px 5px #d7d7d7;
+    transition: all 0.4s;
+    padding: 10px;
+}
+
+@media only screen and (max-width:1050px) {
+    .achivement {
+        min-width: none;
+        width: 100%;
+    }
+}
+
+.achivement:hover {
+    box-shadow: -3px 3px 3px rgb(56, 56, 56), -5px 7px 5px 5px rgba(35, 44, 105, 0.5);
+    transform: translate(5px, -10px);
+}
+
+
+
+/* ===========================   programs   ======================== */
+
+
+.achivementsPrograms .programs {
+    width: 29.999%;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 8px;
+}
+
+.programList {
+    width: 100%;
+    flex-direction: column;
+}
+
+
+.program {
+    display: flex;
+    width: 90%;
+    min-height: 180px;
+    height: auto;
+    background-color: var(--aot-light-color--);
+    /* border: 3px solid black; */
+    border-radius: 7px;
+    margin: 10px 0px;
+    flex-direction: column;
+    padding: 7px;
+    transition: all 0.4s;
+    box-shadow: -5px 5px 5px #d7d7d7;
+    /* background-image: url(../assets/images/program1.jpg); */
+    object-fit: contain;
+    background-position: center;
+}
+
+#program1 {
+    background-image: url(../assets/images/program1.jpg);
+}
+
+.program:hover {
+    box-shadow: -3px 3px 3px rgb(56, 56, 56), -5px 7px 5px 5px rgba(35, 44, 105, 0.5);
+    transform: translate(5px, -10px);
+}
+
+.program a p,
+.program a h3 {
+    text-align: center;
+}
+
+.program a {
+    text-decoration: none;
+    color: #222;
+}
+
+.program a:hover {
+    text-decoration: underline;
+    color: rgb(115, 48, 146);
+}
+
+
+
+/* =================================    curriculum    ============================= */
+
+.curriculum {
+    margin: 1.5rem 1rem;
+    padding: 1rem 1.5rem;
+    background-color: var(--aot-light-color--);
+    box-shadow: var(--normal-shadow--);
+    border-radius: 5px;
+}
+
+.curriculum ul {
+    list-style-type: circle;
+}
+
+.curriculum ul li {
+    font-size: 1em;
+}
+
+.curriculum ul li a {
+    text-decoration: none;
+    color: #222;
+}
+
+/* ======================================    research   =============================== */
+
+
+.research {
+    margin: 1.5rem 1rem;
+    padding: 1rem 1rem 1rem 1.5rem;
+    background-color: var(--aot-light-color--);
+    box-shadow: var(--normal-shadow--);
+    border-radius: 5px;
+}
+
+
+.research ul {
+    list-style-type: circle;
+}
+
+.research ul li {
+    font-size: 1em;
+}
+
+a {
+    text-decoration: none;
+    color: purple;
+}
+
+/* ===================================   faq    ============================= */
+
+.faqs {
+    padding: 20px 1rem;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    border: 1px solid black;
+    padding: 15px;
+    text-align: center;
+}
+
+th:first-child,
+td:first-child {
+    width: 25%;
+}
+
+th:nth-child(2),
+td:nth-child(2) {
+    width: 75%;
+}
+
+.faqs ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.faq {
+    padding: 10px 10px;
+    margin: 10px 0px;
+    background-color: var(--aot-light-color--);
+    box-shadow: var(--normal-shadow--);
+    border-radius: 20px;
+    width: 900px;
+    transition: all 0.3s ease;
+}
+
+.faq:hover {
+    background-color: rgb(234, 234, 234);
+}
+
+.faq p a {
+    text-decoration: none;
+    color: #222;
+}
+
+.question {
+    padding: 10px 13px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.question>img {
+    width: 1.6rem;
+    margin-left: 10px;
+}
+
+.answer {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+@keyframes revealHeight {
+    0% {
+        max-height: 0;
+        padding: 0 13px;
+    }
+
+    100% {
+        max-height: 20rem;
+        padding: 10px 13px;
+    }
+}
+
+@keyframes hideHeight {
+    0% {
+        max-height: 20rem;
+        padding: 10px 13px;
+    }
+
+    100% {
+        max-height: 0;
+        padding: 0 13px;
+    }
+}
+
+.displayAnswer {
+    animation: revealHeight 0.5s ease forwards;
+}
+
+.hideAnswer {
+    animation: hideHeight 0.5s ease forwards;
+}
+
+
+
+@keyframes rotateIcon {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(90deg);
+    }
+}
+
+/* Apply the animation to the 'rotate' class */
+.rotate {
+    animation: rotateIcon 0.3s ease forwards;
+}
+
+@keyframes reverseRotateIcon {
+    from {
+        transform: rotate(90deg);
+    }
+
+    to {
+        transform: rotate(0deg);
+    }
+}
+
+.reverseRotate {
+    animation: reverseRotateIcon 0.3s ease forwards;
+    ;
+}
+
+
+/* =================================== scroll to top  =============================== */
+
+.to-top {
+    height: 40px;
+    width: 40px;
+    padding: 5px;
+    border-radius: 50%;
+    background-color: rgb(255, 255, 255);
+    position: fixed;
+    right: 3%;
+    bottom: 3%;
+    z-index: 10;
+    box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.293);
+    transition: all 0.3s ease;
+}
+
+.to-top:active {
+    scale: 1.1;
+}
+
+
+@keyframes to-top-pop-up {
+    from {
+        scale: 0;
+    }
+
+    to {
+        scale: 1;
+    }
+}
+
+.deactive-btn {
+    animation: to-top-pop-up 0.3s ease reverse;
+}
+
+
+.active-btn {
+    display: block;
+    opacity: 1;
+    animation: to-top-pop-up 0.3s ease;
+}
+
+.to-top a {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    padding: 12%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.to-top a img {
+    width: 100%;
+    height: 100%;
+}
+
+/* ================================================================== */
+
+
+.link-img {
+    width: 1rem;
+    margin-left: 0.3rem;
+    position: relative;
+    top: 13%;
+}
+
+.intro-slide-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-top: 1rem;
+}
+
+.intro-slide-container .intro-btn {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+}
+
+.next {
+    right: 30px;
+}
+
+.prev {
+    left: 30px;
+}
+
+
+
+/* ================================   Responsive   ========================================= */
+
+
+@media only screen and (max-width: 1000px) and (min-width: 600px) {
+    .achivementsPrograms .achivements {
+        width: 59.99%;
+    }
+
+    .achivementsPrograms .programs {
+        width: 39.99%;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .achivementsPrograms {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .achivementsPrograms .achivements {
+        width: 100%;
+    }
+
+    .achivementsPrograms .programs {
+        width: 100%;
+    }
+
+    .achivement {
+        max-width: none;
+        width: 100%;
+        padding: 10px;
+    }
+
+    .program {
+        max-width: none;
+        width: 100%;
+        padding: 10px;
+    }
+
+    #program1 {
+        margin-top: 1rem;
+    }
+
+    .programHeading h2 {
+        width: 100dvw;
+        background-color: #232C69;
+        color: white;
+        text-align: center;
+        padding: 8px 0px;
+        margin-top: 20px;
+        font-size: 1.7em;
+
+    }
+
+
+}
+
+@media only screen and (max-width:400px) {
+    .banner .middle h1 {
+        font-size: 1.8em;
+    }
+}
+
+@media only screen and (max-width:950px) {
+    .intro-slide-container {
+        height: 245px;
+    }
+
+    .intro-slide-container .intro-btn {
+        top: 25%;
+    }
+
+    .headings {
+        padding: 5px 0px;
+        margin-top: 10px;
+        font-size: 1.5em;
+    }
+
+    .beforeIntro img {
+        padding: 0.5em;
+        width: 3.1rem;
+    }
+
+}
+
+@media only screen and (max-width:650px) {
+    .facility {
+        width: 100%;
+    }
+
+    .headings {
+        padding: 3px 0px;
+    }
+
+    .beforeIntro img {
+        width: 2.86rem;
+    }
+
+}
+
+@media only screen and (max-width:950px) {
+    .faqs ul {
+        width: 100%;
+    }
+
+    .faqs ul li {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+
+    }
+
+    .faq {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width:630px) {
+    .intro-slide-container {
+        padding: 0;
+        margin-top: 0;
+    }
+
+    .intro-slides {
+        border-radius: 0px;
+    }
+
+    .infrastructure {
+        padding: 0;
+        margin: 10px 0;
+    }
+
+    .facility {
+        margin: 5px 0;
+    }
+
+    .achivementsPrograms {
+        padding: 5px 0;
+    }
+
+    .achivement {
+        margin: 5px 0;
+    }
+
+    .programHeading h2 {
+        margin-top: 3px;
+    }
+
+    .program {
+        margin: 5px 0;
+    }
+
+    .curriculum {
+        margin: 0.5rem 0;
+    }
+
+    .research {
+        margin: 0.5rem 0;
+    }
+
+    .faqs {
+        padding: 0;
+    }
+
+}

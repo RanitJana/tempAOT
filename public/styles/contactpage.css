@@ -1,0 +1,243 @@
+header {
+    margin-top: -1.2rem;
+    padding-bottom: 0.5rem;
+}
+
+main {
+    position: relative;
+}
+
+main section {
+    background-color: var(--aot-light-color--);
+    border-radius: 8px;
+    margin: 1rem;
+    padding: 1rem 2rem;
+    box-shadow: var(--normal-shadow--);
+}
+
+main section h2 {
+    color: var(--aot-color--);
+    padding: 1rem 0;
+    padding-top: 0;
+}
+
+.aot .info {
+    display: grid;
+    grid-template-columns: 50% auto;
+    grid-template-rows: auto auto auto;
+    grid-gap: 1rem;
+}
+
+.aot .child,
+.corporate .info,
+.ion .info {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: var(--normal-shadow--) inset;
+}
+
+.aot .child>strong {
+    color: var(--aot-color--);
+    border-bottom: 1px solid gray;
+    display: block;
+    width: 100%;
+    padding: 0.6rem;
+    font-size: 1.1rem;
+    text-align: center;
+    margin-bottom: -1.5rem;
+}
+
+.aot .child p {
+    display: flex;
+    border: 1px dotted gray;
+    background-color: var(--aot-light-color--);
+    align-items: center;
+    margin: 1rem;
+    padding: 0.3rem 1rem;
+    border-radius: 8px;
+
+}
+
+.aot .child p strong,
+.corporate .info p strong,
+.ion .info p strong {
+    display: flex;
+    align-items: center;
+    text-wrap: nowrap;
+}
+
+.aot .child p strong span,
+.corporate .info p strong span,
+.ion .info p strong span {
+    margin-right: 1rem;
+}
+
+.aot .child p strong img,
+.corporate .info img,
+.ion .info img {
+    mix-blend-mode: multiply;
+    width: 1.3rem;
+    margin-right: 0.3rem;
+}
+
+.aot .child p:last-child img,
+.corporate p:last-child img {
+    margin-top: -0.4rem;
+}
+
+.corporate .info p,
+.ion .info p {
+    display: flex;
+    margin: 1rem;
+}
+
+.corporate .info,
+.ion .info {
+    padding: 1rem;
+}
+
+.back {
+    display: flex;
+    position: sticky;
+    top: 0;
+    box-shadow: 0 2px 5px 5px rgba(0, 0, 0, 0.203);
+    z-index: 5;
+    transition: all 0.5s ease;
+    transform: none;
+}
+
+.back .backImg {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
+    background-color: white;
+    background-color: var(--aot-light-color--);
+}
+
+.back .backImg:hover {
+    cursor: pointer;
+}
+
+.back h1 {
+    background-color: var(--aot-color--);
+    color: white;
+    width: 100%;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.backImg img {
+    width: 2rem;
+    mix-blend-mode: multiply;
+}
+
+.content{
+    display: flex;
+    align-items: center;
+}
+.copyBtn{
+    transition: all 0.3s ease;
+    width: 1.2rem;
+    margin-left: 0.5rem;
+}
+.copyBtn:hover{
+    cursor: pointer;
+}
+
+@media only screen and (min-width:1097px) {
+    .banner {
+        justify-content: center;
+    }
+}
+
+@media only screen and (max-width:1000px) {
+    .aot .info {
+        grid-template-columns: auto;
+    }
+}
+
+@media only screen and (max-width:750px) {
+    header {
+        margin-top: 0rem;
+    }
+}
+
+@media only screen and (max-width:581px) {
+
+    .corporate .info p,
+    .ion .info p {
+        margin: 1rem 0;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background-color: var(--aot-light-color--);
+        border-radius: 8px;
+        border: 1px dotted gray;
+    }
+
+    .corporate .info p strong,
+    .ion .info p strong {
+        padding: 0.5rem;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        border-bottom: 1px dotted gray;
+    }
+
+    .corporate .info p>span,
+    .ion .info p>span {
+        padding: 1rem 0.5rem;
+    }
+}
+
+@media only screen and (max-width:514px) {
+
+    .back {
+        height: 3rem;
+    }
+
+    .back h1,
+    main section h2 {
+        font-size: 1.2rem;
+    }
+
+    .back .backImg img {
+        width: 1.5rem;
+    }
+}
+
+@media only screen and (max-width:398px) {
+    main section {
+        margin: 1rem 0;
+        padding: 1rem;
+        border-radius: 0;
+    }
+}
+
+@media only screen and (max-width:357px) {
+    .back h1 {
+        font-size: 1rem;
+    }
+}
+
+@media only screen and (max-width:340px) {
+    main section {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .aot .child,
+    .ion .info,
+    .corporate .info {
+        border-radius: 0;
+    }
+
+    main section h2 {
+        padding-left: 1rem;
+    }
+}
