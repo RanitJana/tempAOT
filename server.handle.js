@@ -25,8 +25,8 @@ const studentPortal = require('./routes/studentPortal.route.js');
 const search = require('./routes/search.route.js');
 
 app
-    .use(express.static('./public'))
     .set('view engine', 'ejs')
+    .use(express.static('./public'))
     .use('/achivement', achivement)
     .use('/career', career)
     .use('/contact', contact)
